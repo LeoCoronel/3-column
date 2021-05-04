@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+    background: hsl(0, 0%, 95%);
+    font-size: 15px;
+}
+
+.cards {
+    display: grid;
+    place-content: center;
+    color: hsla(0, 0%, 100%, 0.75);
+    
+    .card {
+        width: 375px;
+        height: 500px;
+        padding: 4em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-family: 'Lexend Deca', sans-serif;
+
+        &--sedan {
+            background: var(--bright-orange);
+        }
+        &--suvs {
+            background: var(--dark-cyan);
+        }
+        &--luxury {
+            background: var(--very-dark-cyan);
+        }
+
+        &__img {
+            width: 50px;
+        }
+
+        &__title {
+            font-family: 'Big Shoulders Display', cursive;
+            font-size: 3em;
+            color: hsl(0, 0%, 95%);
+            text-transform: uppercase;
+        }
+
+        & a {
+            text-decoration: none;
+        }
+
+        &__btn {
+            width: 120px;
+            height: 40px;
+            border-radius: 50px;
+            display: grid;
+            place-content: center;
+            background: hsl(0, 0%, 95%);
+
+            &--sedan {
+                color: var(--bright-orange);
+            }
+
+            &--suvs {
+                color: var(--dark-cyan);
+            }
+
+            &--luxury {
+                color: var(--very-dark-cyan);
+            }
+
+            &:active {
+
+                color: white;
+                border: 2px solid white;
+                background-color: rgba(0, 0, 0, 0);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .cards {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+}

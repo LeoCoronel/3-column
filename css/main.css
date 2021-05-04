@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  background: #f2f2f2;
+  font-size: 15px;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.cards .card {
+  width: 375px;
+  height: 500px;
+  padding: 4em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.cards .card--sedan {
+  background: var(--bright-orange);
+}
+
+.cards .card--suvs {
+  background: var(--dark-cyan);
+}
+
+.cards .card--luxury {
+  background: var(--very-dark-cyan);
+}
+
+.cards .card__img {
+  width: 50px;
+}
+
+.cards .card__title {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 3em;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.cards .card a {
+  text-decoration: none;
+}
+
+.cards .card__btn {
+  width: 120px;
+  height: 40px;
+  border-radius: 50px;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background: #f2f2f2;
+}
+
+.cards .card__btn--sedan {
+  color: var(--bright-orange);
+}
+
+.cards .card__btn--suvs {
+  color: var(--dark-cyan);
+}
+
+.cards .card__btn--luxury {
+  color: var(--very-dark-cyan);
+}
+
+.cards .card__btn:active {
+  color: white;
+  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+@media only screen and (min-width: 1000px) {
+  .cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=main.css.map */
